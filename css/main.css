@@ -1,1 +1,90 @@
-/*# sourceMappingURL=main.css.map */
+/*** Variables ***/
+/*** Mixins ***/
+/*** CSS Reset ***/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*** Base styling ***/
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: #ffeeee;
+}
+
+/*** Layout ***/
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+/*** Components ***/
+.post {
+  max-width: 320px;
+  width: 100%;
+  background-color: #fefefe;
+  border: 2px solid #ffe1e1;
+  border-radius: 12px;
+}
+.post .post__btn {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+}
+.post .post__top {
+  display: flex;
+  gap: 0px;
+  justify-content: space-between;
+  padding: 8px 4px;
+}
+.post .post__top .post__profile {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.post .post__top .post__profile .post__profile-picture {
+  height: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.post .post__top .post__profile .post__profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post .post__top .post__profile .post__username {
+  font-size: 16px;
+  font-weight: 500;
+}
+.post .post__content .post__image img {
+  width: 100%;
+}
+.post .post__bottom {
+  display: flex;
+  gap: 12px;
+  padding: 4px;
+}
+.post .post__bottom .post__btn--save {
+  margin-left: auto;
+}
+
+@media (min-width: 1024px) {
+  .post .post__content,
+  .post .post__btn {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=main.css.map */
