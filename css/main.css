@@ -21,6 +21,7 @@ main {
 
 body {
   background-color: #ffeeee;
+  color: #111111;
 }
 
 /*** Layout ***/
@@ -44,6 +45,7 @@ body {
   background-color: transparent;
   border: none;
   font-size: 24px;
+  color: #111111;
 }
 .post .post__top {
   display: flex;

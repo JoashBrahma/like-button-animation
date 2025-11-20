@@ -1,5 +1,7 @@
 /*** Variables ***/
 $bg-primary-color: #ffeeee;
+$text-primary-color: #111111;
+
 
 $text-size-xs: 10px;
 $text-size-sm: 12px;
@@ -60,6 +62,7 @@ main {
 
 body {
   background-color: $bg-primary-color;
+  color: $text-primary-color;
 }
 
 /*** Layout ***/
@@ -81,6 +84,7 @@ body {
     background-color: transparent;
     border: none;
     font-size: $text-size-xl;
+    color: $text-primary-color;
   }
 
   .post__top {
