@@ -74,10 +74,39 @@ body {
 .post .post__content .post__image img {
   width: 100%;
 }
+.post .post__content i {
+  font-size: 84px;
+  color: #ed4956;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  translate: -50% -50%;
+  scale: 0;
+  rotate: -20deg;
+  opacity: 0;
+  animation: liked 1.75s ease-in-out;
+}
+@keyframes liked {
+  25% {
+    scale: 1.2;
+    rotate: 20deg;
+    opacity: 1;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+}
 .post .post__bottom {
   display: flex;
   gap: 12px;
   padding: 4px;
+}
+.post .post__bottom .post__btn--like.liked i {
+  color: #ed4956;
 }
 .post .post__bottom .post__btn--save {
   margin-left: auto;

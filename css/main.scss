@@ -23,6 +23,7 @@ $post-bg-color: #fefefe;
 $post-max-width: 320px;
 $profile-picture-width: $post-max-width / 8;
 $post-border: 2px solid #ffe1e1;
+$liked-text-color: #ed4956;
 
 /*** Mixins ***/
 @mixin flex($gap: 0px) {
@@ -117,11 +118,45 @@ body {
         width: 100%;
       }
     }
+
+    i {
+      font-size: $text-size-xl * 3.5;
+      color: $liked-text-color;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      translate: -50% -50%;
+      scale: 0;
+      rotate: -20deg;
+      opacity: 0;
+      animation: liked 1.75s ease-in-out;
+    }
+
+    @keyframes liked {
+      25% {
+        scale: 1.2;
+        rotate: 20deg;
+        opacity: 1;
+      }
+
+      50% {
+        scale: 1;
+      }
+
+      100% {
+        top: 20%;
+        opacity: 0;
+      }
+    }
   }
 
   .post__bottom {
     @include flex($space-md);
     padding: $space-xs;
+
+    .post__btn--like.liked i {
+      color: $liked-text-color;
+    }
 
     .post__btn--save {
       margin-left: auto;
@@ -131,6 +166,7 @@ body {
 
 @media (min-width: 1024px) {
   .post {
+
     .post__content,
     .post__btn {
       cursor: pointer;
