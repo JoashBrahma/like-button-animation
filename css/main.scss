@@ -74,6 +74,7 @@ body {
   background-color: $post-bg-color;
   border: $post-border;
   border-radius: $border-radius-md;
+  position: relative;
 
   .post__btn {
     background-color: transparent;

@@ -38,6 +38,7 @@ body {
   background-color: #fefefe;
   border: 2px solid #ffe1e1;
   border-radius: 12px;
+  position: relative;
 }
 .post .post__btn {
   background-color: transparent;
